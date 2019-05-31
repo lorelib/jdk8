@@ -62,12 +62,14 @@ else
   MSC_VER_MAJOR=`"$ECHO" $MSC_VER_RAW | "$CUT" -d'.' -f1`
   MSC_VER_MINOR=`"$ECHO" $MSC_VER_RAW | "$CUT" -d'.' -f2`
   MSC_VER_MICRO=`"$ECHO" $MSC_VER_RAW | "$CUT" -d'.' -f3`
-  if [ "${MSC_VER_MAJOR}" -eq 14 -a "${MSC_VER_MINOR}" -eq 0 -a "${MSC_VER_MICRO}" -eq 30701 ] ; then
-    # This said 1400 but it was really more like VS2003 (VC7) in terms of options
-    MSC_VER=1399
-  else
-    MSC_VER=`"$EXPR" $MSC_VER_MAJOR \* 100 + $MSC_VER_MINOR`
-  fi
+  # if [ "${MSC_VER_MAJOR}" -eq 14 -a "${MSC_VER_MINOR}" -eq 0 -a "${MSC_VER_MICRO}" -eq 30701 ] ; then
+  #   # This said 1400 but it was really more like VS2003 (VC7) in terms of options
+  #   MSC_VER=1399
+  # else
+  #   MSC_VER=`"$EXPR" $MSC_VER_MAJOR \* 100 + $MSC_VER_MINOR`
+  # fi
+  MSC_VER=1600
+  MSC_VER_RAW=16.00.40219.01
   echo "MSC_VER=$MSC_VER"
   echo "MSC_VER_RAW=$MSC_VER_RAW"
 fi

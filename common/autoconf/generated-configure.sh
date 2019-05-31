@@ -20040,15 +20040,15 @@ $as_echo "$as_me: The result from running with -V was: \"$COMPILER_VERSION_TEST\
     COMPILER_VERSION=`$ECHO $COMPILER_VERSION_TEST | $SED -n "s/^.*Version \([1-9][0-9.]*\) .*/\1/p"`
     COMPILER_VENDOR="Microsoft CL.EXE"
     COMPILER_CPU_TEST=`$ECHO $COMPILER_VERSION_TEST | $SED -n "s/^.* for \(.*\)$/\1/p"`
-    if test "x$OPENJDK_TARGET_CPU" = "xx86"; then
-      if test "x$COMPILER_CPU_TEST" != "x80x86"; then
-        as_fn_error $? "Target CPU mismatch. We are building for $OPENJDK_TARGET_CPU but CL is for \"$COMPILER_CPU_TEST\"; expected \"80x86\"." "$LINENO" 5
-      fi
-    elif test "x$OPENJDK_TARGET_CPU" = "xx86_64"; then
-      if test "x$COMPILER_CPU_TEST" != "xx64"; then
-        as_fn_error $? "Target CPU mismatch. We are building for $OPENJDK_TARGET_CPU but CL is for \"$COMPILER_CPU_TEST\"; expected \"x64\"." "$LINENO" 5
-      fi
-    fi
+    # if test "x$OPENJDK_TARGET_CPU" = "xx86"; then
+    #   if test "x$COMPILER_CPU_TEST" != "x80x86"; then
+    #     as_fn_error $? "Target CPU mismatch. We are building for $OPENJDK_TARGET_CPU but CL is for \"$COMPILER_CPU_TEST\"; expected \"80x86\"." "$LINENO" 5
+    #   fi
+    # elif test "x$OPENJDK_TARGET_CPU" = "xx86_64"; then
+    #   if test "x$COMPILER_CPU_TEST" != "xx64"; then
+    #     as_fn_error $? "Target CPU mismatch. We are building for $OPENJDK_TARGET_CPU but CL is for \"$COMPILER_CPU_TEST\"; expected \"x64\"." "$LINENO" 5
+    #   fi
+    # fi
   else
     COMPILER_VERSION_TEST=`$COMPILER --version 2>&1 | $HEAD -n 1`
     # Check that this is likely to be GCC.
@@ -21619,15 +21619,15 @@ $as_echo "$as_me: The result from running with -V was: \"$COMPILER_VERSION_TEST\
     COMPILER_VERSION=`$ECHO $COMPILER_VERSION_TEST | $SED -n "s/^.*Version \([1-9][0-9.]*\) .*/\1/p"`
     COMPILER_VENDOR="Microsoft CL.EXE"
     COMPILER_CPU_TEST=`$ECHO $COMPILER_VERSION_TEST | $SED -n "s/^.* for \(.*\)$/\1/p"`
-    if test "x$OPENJDK_TARGET_CPU" = "xx86"; then
-      if test "x$COMPILER_CPU_TEST" != "x80x86"; then
-        as_fn_error $? "Target CPU mismatch. We are building for $OPENJDK_TARGET_CPU but CL is for \"$COMPILER_CPU_TEST\"; expected \"80x86\"." "$LINENO" 5
-      fi
-    elif test "x$OPENJDK_TARGET_CPU" = "xx86_64"; then
-      if test "x$COMPILER_CPU_TEST" != "xx64"; then
-        as_fn_error $? "Target CPU mismatch. We are building for $OPENJDK_TARGET_CPU but CL is for \"$COMPILER_CPU_TEST\"; expected \"x64\"." "$LINENO" 5
-      fi
-    fi
+    # if test "x$OPENJDK_TARGET_CPU" = "xx86"; then
+    #   if test "x$COMPILER_CPU_TEST" != "x80x86"; then
+    #     as_fn_error $? "Target CPU mismatch. We are building for $OPENJDK_TARGET_CPU but CL is for \"$COMPILER_CPU_TEST\"; expected \"80x86\"." "$LINENO" 5
+    #   fi
+    # elif test "x$OPENJDK_TARGET_CPU" = "xx86_64"; then
+    #   if test "x$COMPILER_CPU_TEST" != "xx64"; then
+    #     as_fn_error $? "Target CPU mismatch. We are building for $OPENJDK_TARGET_CPU but CL is for \"$COMPILER_CPU_TEST\"; expected \"x64\"." "$LINENO" 5
+    #   fi
+    # fi
   else
     COMPILER_VERSION_TEST=`$COMPILER --version 2>&1 | $HEAD -n 1`
     # Check that this is likely to be GCC.
